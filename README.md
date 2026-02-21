@@ -50,11 +50,13 @@ Upload → Preprocess → Vectorize → Train → Predict → Display
 
 ## 🛠 Tech Stack
 
-**Backend:** Python, Flask  
-**Machine Learning:** Scikit-learn (Isolation Forest)  
-**NLP:** TF-IDF Vectorization, Regex  
-**Data Handling:** Pandas, NumPy  
-**Model Persistence:** Joblib  
+| Category | Tools Used |
+|----------|------------|
+| Backend | Python, Flask |
+| Machine Learning | Scikit-learn (Isolation Forest) |
+| NLP | TF-IDF Vectorization, Regex |
+| Data Handling | Pandas, NumPy |
+| Model Persistence | Joblib |  
 
 ---
 
