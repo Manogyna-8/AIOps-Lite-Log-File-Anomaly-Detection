@@ -88,15 +88,11 @@ AIOps_Lite/
 
 1. Install dependencies:
 
-```
 pip install -r requirements.txt
-```
 
 2. Run the application:
 
-```
 python app.py
-```
 
 3. Open in browser:
 
