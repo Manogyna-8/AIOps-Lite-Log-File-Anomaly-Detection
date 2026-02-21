@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Anomaly Detection Results</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f5fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #fafafa;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f0f0f0;
+        }
+
+        /* 🔥 Highlight anomaly rows */
+        .anomaly-row {
+            background-color: #ffcccc !important;
+            color: #a70000;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Anomaly Detection Results</h2>
+
+        <!-- Inject styled table -->
+        {{ tables | safe }}
+
+        <a href="/" class="back-btn">Back</a>
+    </div>
+
+    <!-- 🔥 Add script to highlight anomaly rows -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const rows = document.querySelectorAll("table tr");
+
+            rows.forEach(row => {
+                const cells = row.getElementsByTagName("td");
+                
+                if (cells.length > 0) {
+                    const anomalyStatus = cells[cells.length - 1].innerText.trim();
+
+                    if (anomalyStatus === "Anomaly") {
+                        row.classList.add("anomaly-row");
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
