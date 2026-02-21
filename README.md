@@ -86,17 +86,11 @@ AIOps_Lite/
 
 ## 🧪 How to Run Locally
 
-1. Install dependencies:
+1. Install dependencies: pip install -r requirements.txt
 
-pip install -r requirements.txt
+2. Run the application: python app.py
 
-2. Run the application:
-
-python app.py
-
-3. Open in browser:
-
-http://127.0.0.1:5000
+3. Open in browser: http://127.0.0.1:5000
 
 ---
 
